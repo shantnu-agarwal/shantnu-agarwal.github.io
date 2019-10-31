@@ -7,9 +7,11 @@ body{
 
 }
 
-
 .nav-item{
-	margin-right: 0.5rem;
+	margin: 0.2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	
 }
 .nav-item:hover{
 	margin-right: 1rem;
@@ -90,4 +92,8 @@ body{
 
 #scrollBtn:hover {
   background-color: #555; 
+}
+
+.nav-item{
+	border-radius: 0.3rem;
 }

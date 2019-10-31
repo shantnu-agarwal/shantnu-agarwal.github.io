@@ -43,9 +43,16 @@ if(hours<=6 || hours>=18){
   convertBG(document.getElementsByClassName("modal-content"),"#121212");
   convertBG(document.getElementsByClassName("modal-header"),"#000000");
   convertBG(document.getElementsByClassName("modal-footer"),"#000000");
+  convertBG(document.getElementsByClassName("navbar-toggler"),"#332940");
   
   convertModal();
   
+  if(document.getElementsByClassName("navbar-expand-lg").length==0){
+    modalList = document.getElementsByClassName("nav-item");
+    for(i=0;i<modalList.length;i++){
+      modalList[i].style.border="0px #0062cc solid";
+  }
+  }
 
 }
 
