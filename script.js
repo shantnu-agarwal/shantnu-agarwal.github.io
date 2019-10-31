@@ -17,7 +17,7 @@ function topFunction() {
 var time = new Date();
 hours = time.getHours();
 console.log("It is " + hours);
-if(hours>10){
+if(hours>=0){
   document.body.style.background = "#121212";
   document.getElementsByClassName("jumbotron")[0].style.background = "#000000";
   
