@@ -17,7 +17,7 @@ function topFunction() {
 var time = new Date();
 hours = time.getHours();
 console.log("It is " + hours);
-if(hours>=0){
+if(hours<=6 || hours>=18){
   document.body.style.background = "#121212";
   document.getElementsByClassName("jumbotron")[0].style.background = "#000000";
   
@@ -29,11 +29,22 @@ if(hours>=0){
   convert(document.querySelectorAll("small"),"white");
   convert(document.querySelectorAll("figcaption"),"white");
   convert(document.querySelectorAll("button"),"white");
+  convert(document.querySelectorAll("h4"),"white");
+  convert(document.querySelectorAll("h5"),"white");
+  convertBG(document.getElementsByClassName("nav-item"),"#121212");
+  document.getElementsByClassName("navbar")[0].classList.remove("bg-light");
+  convertBG(document.getElementsByClassName("navbar"),"black");
   convertBG(document.getElementsByClassName("card-body"),"black");
   convertBG(document.getElementsByClassName("card"),"black");
   convertBG(document.getElementsByClassName("list-group-item"),"black");
   convertBG(document.getElementsByClassName("btn"),"black");
   convertBG(document.getElementsByClassName("footer"),"#121212");
+  convertBG(document.getElementsByClassName("modal"),"#121212"); //for body when modal is open
+  convertBG(document.getElementsByClassName("modal-content"),"#121212");
+  convertBG(document.getElementsByClassName("modal-header"),"#000000");
+  convertBG(document.getElementsByClassName("modal-footer"),"#000000");
+  
+  convertModal();
   
 
 }
@@ -47,4 +58,18 @@ function convertBG(elemnt,colour){
   for (i=0;i<elemnt.length; i++){
     elemnt[i].style.background = colour;
   }
+}
+
+function convertModal(){
+  var modalList=document.getElementsByClassName("modal-content");
+  
+  for(i=0;i<modalList.length;i++){
+    modalList[i].style.border="5PX black solid";
+  }
+  
+  modalList = document.getElementsByClassName("nav-item");
+  for(i=0;i<modalList.length;i++){
+    modalList[i].style.border="1px #0062cc solid";
+  }
+  
 }
