@@ -16,7 +16,7 @@ function topFunction() {
 
 var time = new Date();
 hours = time.getHours();
-hours+=12;
+hours=10;
 console.log("It is " + hours);
 if(hours<=6 || hours>=18){
   document.body.style.background = "#121212";
