@@ -24,3 +24,10 @@
     width: 100%;
     margin-top: 1em;
 }
+
+#sub-button{
+    display: block;
+    margin: auto;
+    width:50%; 
+    margin-bottom: 2em;
+}
