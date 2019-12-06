@@ -80,3 +80,7 @@ function convertModal(){
   }
   
 }
+
+function nullify(){
+  alert("Don't do that, don't make it easy for them to track you.")
+}
