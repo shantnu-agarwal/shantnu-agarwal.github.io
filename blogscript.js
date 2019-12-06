@@ -43,7 +43,7 @@ if(hours<=6 || hours>=18){
   convertBG(document.getElementsByClassName("modal-header"),"#000000");
   convertBG(document.getElementsByClassName("modal-footer"),"#000000");
   convertBG(document.getElementsByClassName("navbar-toggler"),"#332940");
-  convert(document.getElementsByClassName("blog-link"),"blue");
+  convert(document.getElementsByClassName("blog-link"),"#3F51B5");
   
   convertModal();
   
