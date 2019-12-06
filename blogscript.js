@@ -16,14 +16,12 @@ function topFunction() {
 
 var time = new Date();
 hours = time.getHours();
-hours=10;
 console.log("It is " + hours);
 if(hours<=6 || hours>=18){
   document.body.style.background = "#121212";
-  document.getElementsByClassName("jumbotron")[0].style.background = "#000000";
-  
   convert(document.querySelectorAll("p"),"white");
   convert(document.querySelectorAll("h1"),"white");
+  convert(document.querySelectorAll("h6"),"white")
   convert(document.querySelectorAll("h2"),"white");
   convert(document.querySelectorAll("li"),"white");
   convert(document.querySelectorAll("a"),"white");
