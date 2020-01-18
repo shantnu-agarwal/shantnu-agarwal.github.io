@@ -97,3 +97,13 @@ body{
 .nav-item{
 	border-radius: 0.3rem;
 }
+
+.bult{
+	height: 15px;
+	margin-right: 10px;
+}
+
+.bult2{
+	fill: white;
+	height: 15px;
+}
