@@ -17,7 +17,7 @@ function topFunction() {
 var time = new Date();
 hours = time.getHours();
 console.log("It is " + hours);
-if(hours<=6 || hours>=18){
+if(hours<=6 || hours>=18  ){
   document.body.style.background = "#121212";
   document.getElementsByClassName("jumbotron")[0].style.background = "#000000";
   
@@ -45,6 +45,11 @@ if(hours<=6 || hours>=18){
   convertBG(document.getElementsByClassName("modal-footer"),"#000000");
   convertBG(document.getElementsByClassName("navbar-toggler"),"#332940");
   
+  var arrows = document.querySelectorAll(".bult");
+
+  for (let i = 0; i < arrows.length; i++) {
+	  arrows[i].style.fill = "white";
+  }
   convertModal();
   
   if(document.getElementsByClassName("navbar-expand-lg").length==0){
