@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="stylesheet" type="text/css" href="../css/blog.css">
 
-    <title>Trusting Your Information With The Right Company | Shantnu Agarwal</title>
+    <title>APIs with Azure Funtions | Shantnu Agarwal</title>
     <style type="text/css">
         p,
         span {
@@ -110,42 +110,43 @@
     <div class="container">
 
         <div id="blog-header">
-            <h1 class="card-title text-center">Trusting Your Information With The Right Company</h1>
+            <h1 class="card-title text-center">APIs with Azure Funtions</h1>
             <hr class="my-4">
             </hr>
-            <h6>December 6, 2019</h6>
+            <h6>June 19, 2020</h6>
         </div>
 
     </div>
-    <img class="blog-header-image" src="../images/companies.jpg" alt="tech companies logos">
+    <img class="blog-header-image" src="../images/azurefunctionsapi/title.png" alt="title image for blog">
     <div class="container blog-body">
+        <h2 class="blog-subheading">What is the problem that we are looking to solve?</h2>
         <p class="blog-content">
-            <strong>I</strong>n this day and age, we are always connected to the internet. While you may not realise it,
-            but someone somewhere knows about you in more details than you yourself. This is not a speculation and I am
-            not paranoid. If you are interested, check out Wikipedia for <a class="blog-link"
-                href="https://en.wikipedia.org/wiki/Social_profiling">Social Profiling</a>.
+            <strong>I</strong>f you have developed an API and you know that all you want to do is make a request,
+            process it on the server and get the response you need. But it all comes crashing when you get stuck setting
+            up the right environment on the server, or your dependencies go missing.
         </p>
         <p class="blog-content">
-            Since you are reading this, I hope you are not the type of person who goes like “Yes, they are tracking me,
-            so what?”. I might want to change your opinion in a future blog and you might wanna <a class="blog-link"
-                href="https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6jTh1ydMqBBljMfASa_1ApUNURJODFPSlVUUzc3OEdRUDlMSDRZUTZCNi4u">
-                subscribe to know </a>as soon THAT blog goes live.
+            It’s time to change that. What if you only needed to be concerned about what data the API receives, what it
+            does it with and what it returns as response. True, all of us fear seeing the internal server error arising
+            from mismatched server configurations.
         </p>
         <p class="blog-content">
-            According to <a class="blog-link"
-                href="https://us.norton.com/internetsecurity-emerging-threats-2019-data-breaches.html"> this
-                report</a> by Norton Inc, more than 3,800 breaches were reported in 2019 alone with more than 4 billion
-            records being compromised in them. This was far greater than ever before with a year-to-year growth rate of
-            54% as compared to 2018. Keep in mind that these are the ones which were actually reported.
+            You could argue that you are a master in managing servers and have never had issues with server
+            configurations and environment settings. Well, but are you paying only for what you use? Most cloud services
+            provide you certain resources (that can be scaled up) but you are still charged for each second of the app
+            being deployed on the cloud, whether you use it or not.
         </p>
         <p class="blog-content">
-            In a noted incident, Yahoo did not report a breach of its emails and passwords for 3 years and kept it a
-            secret up to 2016!
+            Here is where Azure Functions saves the day. It supports your favourite languages including C#, JavaScript,
+            Python, Java, TypeScript and more. You can write your function in any of these languages and you are only
+            charged when the function is being executed. So, if it was called once in the past 24 hours and execution
+            took 10 seconds, you get charged for 10 seconds.
         </p>
         <p class="blog-content">
-            With this is mind, the next obvious question that comes to mind is whom can you actually trust with your
-            information?
+            If your API can be written down in one function, you can run it on Azure Functions and save the hassles and
+            money.
         </p>
+        <h2 class="blog-subheading">What does Azure Functions do?</h2>
         <p class="blog-content">
             Information leaks can happen anywhere; while your data is being processed in a compromised server or while
             being transmitted over a compromised network. But it can also be targeted while it is simply being stored at
@@ -212,7 +213,8 @@
         </p>
         <p class="blog-content">
             You can start taking control over your information from today itself. For instance, when you see a <a
-                onclick="nullify()"><img src="../images/loginwithfacebook.jpg" alt="Login with Facebook" height="30px"></a>
+                onclick="nullify()"><img src="../images/loginwithfacebook.jpg" alt="Login with Facebook"
+                    height="30px"></a>
             or <a onclick="nullify()"><img src="../images/signinwithgoogle.png" alt="Sign In With Google"
                     height="30px"></a> button, try to avoid that and start fresh instead. Even
             though this might cause you to spend 5 more minutes to set things up, logging in to other websites using
@@ -305,7 +307,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="darktrust.js"></script>
+    <script type="text/javascript" src="darkapi.js"></script>
 
 
 </body>
