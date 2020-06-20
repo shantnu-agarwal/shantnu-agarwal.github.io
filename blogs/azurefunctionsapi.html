@@ -148,107 +148,134 @@
         </p>
         <h2 class="blog-subheading">What does Azure Functions do?</h2>
         <p class="blog-content">
-            Information leaks can happen anywhere; while your data is being processed in a compromised server or while
-            being transmitted over a compromised network. But it can also be targeted while it is simply being stored at
-            some remote data centre.
+            It enables you to run code segments that are perfect for APIs. It also allows you to write code that
+            executes with a timer. So, suppose you want to back-up a file system every 12 hours to a remote server, you
+            can write the function for it and Azure Functions will ensure that it runs every 12 hours.
+        </p>
+        <h2 class="blog-subheading">How to make an Azure Function?</h2>
+        <p class="blog-content">
+            Let's dive straight into it now. There are numerous ways to make an Azure Function. Today, let's look at it
+            from the Azure Portal.
+        </p>
+        <h2>Step 1:</h2>
+        <p class="blog-content">
+            Open the Azure Portal, login and select Create a resource to access the Marketplace.
+            <img class="blog-media" src="../images/azurefunctionsapi/azureportal.png" alt="Azure Portal Home Page">
+        </p>
+        <h2>Step 2:</h2>
+        <p class="blog-content">
+            Search for Functions and choose Function App.
+            <img class="blog-media" src="../images/azurefunctionsapi/searchfunction.png" alt="Searching for Functions">
+        </p>
+        <h2>Step 3:</h2>
+        <p class="blog-content">
+            Click on Create to open the setup for the Function. Fill up the details as you need them. Be careful with
+            the Region as Functions might not be available in all Regions (Central India, for example, does not support
+            Functions but South and West India do). I’ll go ahead with Node.js v12 LTS as my environment. Once done,
+            click next and select a Storage Account.
+            <img class="blog-media" src="../images/azurefunctionsapi/basicconfig.png" alt="Configure Azure Functions">
+        </p>
+        <h2>Step 4:</h2>
+        <p class="blog-content">
+            You will need to set up storage so that there is some memory available for the API or app to store your
+            files and log data. Don’t worry, even though it says storage account, it is just a storage allocation for
+            you on the cloud that you can use for other projects as well. Think of it as your hard disk in the cloud
+            that can store clustered, unstructured data, media files, etc (end of Firebase’s expensive monopoly?).
         </p>
         <p class="blog-content">
-            Not all leaks are actually carried out by hackers. Sometimes, companies go all the way to serve user data
-            directly to interested companies who are more than happy to pay for it. Like when Facebook served data to
-            Cambridge Analytica without user consent and possibly allowed the US elections to get rigged.
+            Choosing the plan in this section of the setup makes all the difference in the world if you are low on
+            budget. Go for serverless so that you can peacefully focus on building, testing, and deploying your
+            function. Serverless means that there is no dedicated server being allocated to you. Your function just
+            needs storage to run. You will only be charged for the computation time and memory that you use. No server
+            fees. If you go for a regular plan, you will be charged even if the function is sitting idle.
+            <img class="blog-media" src="../images/azurefunctionsapi/hosting.png" alt="Configure Storage for API">
+        </p>
+        <h2>Step 5:</h2>
+        <p class="blog-content">
+            Enable Application Insights and smash the Create button. Now you wait. Wait till theresources are deployed
+            and think about what you just did. You deployed a serverless app on the cloud, while minimising costs and
+            giving up all concern for infrastructure. The app that you are now deploying will auto scale to handle
+            millions of calls if that is what you want to throw at it.
+            <img class="blog-media" src="../images/azurefunctionsapi/deployment.png" alt="Deployment Complete">
         </p>
         <p class="blog-content">
-            Tech firms did not prioritise following ethics regarding user data unto now because there were no financial
-            gains in doing so. But now, we have seen how not protecting users’ data can lead to negative financial
-            outcomes. When Facebook was exposed of doing business with Cambridge Analytica in 2018, it saw rapid
-            downfalls in share price and thus a major devaluation.
-            <img class="blog-media" src="../images/markincongress.jpg" alt="Mark Zuckerberg in US Congress Hearing">
+            Now that the function deployment is complete, it's time to dive into the code and see the app work
+            first-hand. Click on Go to resource.
         </p>
         <p class="blog-content">
-            Now Facebook has entered every home and every business across the world through WhatsApp, Instagram and
-            Messenger. They brought out end-to-end encryption to gain trust and marketed it as an in-penetrable security
-            layer. Only a while ago we found out that this wall of encryption was being bypassed by governments for
-            months (Pegasus Spyware).
-        </p>
-        <div class="row">
-            <div class="col-sm">
-                <p class="blog-content">
-                    Google earns the vast majority of its revenue from its Ads services. Its Ads service thrives on the
-                    vast
-                    base of information gathering that is laid down by its extensive network of trackers and cookies. On
-                    a
-                    typical Android phone for example, Google Play Services collects user information that consisting of
-                    real-time location, your search queries, which apps you use more and which apps you use less, which
-                    sites
-                    you visit, device usage patterns and more. This allows them to create a thorough profile of what you
-                    are
-                    and
-                    what you like (and not like) about this world. While it may seem okay to you that the targeted Ads
-                    that
-                    they
-                    are showing are alright because it is ultimately helping you see ads that you are actually
-                    interested
-                    in.
-                    But have you ever talked about something, picked up your phone five minutes later and found an
-                    advertisement
-                    for that exact same thing?
-                </p>
-            </div>
-            <div class="col-sm">
-                <img class="blog-media" src="../images/googlerevenue.png" alt="Google Revenue Breakdown">
-            </div>
-        </div>
-        <p class="blog-content">
-            While Google may try to convince you that they are only collecting information anonymously and no personal
-            data is being collected, it is impossible for us to trust them on this when we know that 84.8% of their
-            revenue comes from Ads.
+            From the left side panel, choose Functions under the Functions header and click on <img
+                src="../images/azurefunctionsapi/new.png" alt="Add Button">
+            to create a new
+            function.
         </p>
         <p class="blog-content">
-            Apple and Microsoft are much better off in this regard since we know that they have no financial gains
-            selling off user data. In fact, iPhone sales account for about <a class="blog-link"
-                href="https://www.investopedia.com/apple-s-5-most-profitable-lines-of-business-4684130">70% of Apple’s
-                Revenue</a> as of Q1 2019. They do not need to sell user data to avoid going bankrupt, they are
-            financially secured anyway.
-            <img class="blog-media" src="../images/mschart.jpg" alt="Revenue Breakup for Microsoft in 2018">
+            There are multiple options to choose from. I will demonstrate the HTTP Trigger today. This will allow you to
+            build an API.
+        </p>
+        <img class="blog-media" src="../images/azurefunctionsapi/newfunc.png" alt="New Function">
+        <p class="blog-content">
+            Choosing a function-level authorisation allows you to allow access to only one Function with each access
+            key.
         </p>
         <p class="blog-content">
-            You can start taking control over your information from today itself. For instance, when you see a <a
-                onclick="nullify()"><img src="../images/loginwithfacebook.jpg" alt="Login with Facebook"
-                    height="30px"></a>
-            or <a onclick="nullify()"><img src="../images/signinwithgoogle.png" alt="Sign In With Google"
-                    height="30px"></a> button, try to avoid that and start fresh instead. Even
-            though this might cause you to spend 5 more minutes to set things up, logging in to other websites using
-            facebook/google credentials allows them to track you more thoroughly. Think about it, why do they offer free
-            login on other platforms? Its
-            because they are benefiting from it through the additional data they are able to collect about you.
+            Open the newly deployed function and click on Code + Test from the left side panel. It will have a boiler
+            plate ready for you already.
+        </p>
+
+        <img class="blog-media" src="../images/azurefunctionsapi/boiler.png" alt="Boiler Plate">
+        <p class="blog-content">
+            This boiler plate is a simple Node.js API which requires a ‘name’ parameter and returns a basic answer.
+            Click on Get Function URL to get the API endpoint along with the access key. This access key authorises you
+            to run the Function and is a mandatory query parameter for the HTTP request.
         </p>
         <p class="blog-content">
-            There is no such thing as absolute trust, but some companies are definitely more concerned about you than
-            others. On a personal level, I use an always updated version of Firefox and prefer Outlook over Gmail. My
-            YouTube tracking is off and Google search results are not stored on the servers.
+            An API call be made using Postman or any other API testing software. Pass a name parameter as query to the
+            API call and test it.
+        </p>
+        <img class="blog-media" src="../images/azurefunctionsapi/postman.gif" alt="Postman API Testing">
+        <p class="blog-content">
+            It’s done! You have a server less function running in the cloud, which is more than just a simple API. If
+            you
+            are new to APIs, you should play around with what you just made to understand concepts better. Let me write
+            down a slight modification of this API to help you get started with making your own.
+        </p>
+
+        <script src="https://gist.github.com/shantnu-agarwal/39cbecab44ee69749e82d1149c666436.js"></script>
+
+
+
+        <p class="blog-content">
+            Azure Functions are dynamic. You can:
+        </p>
+        <ol class="blog-content">
+            <li>
+                Add attachments to it.
+            </li>
+            <li>Make it run on a schedule with a timer.
+
+            </li>
+            <li>Automate a manual process so that the function runs whenever there is a new entry to your SQL database.
+            </li>
+            <li>
+                Connect it with container storage, so that the function can execute automatically whenever a new blob is
+                uploaded.
+            </li>
+        </ol>
+
+        <p class="blog-content">
+            There is so much more to Azure Functions than just a regular HTTP API. Discover more about Azure Functions
+            on the vast and in-depth official documentation from Microsoft.
         </p>
         <p class="blog-content">
-            There are better alternatives for most of the offering from Google and Facebook. Twitter CEO Jack uses
-            DuckDuckGo instead of Google Search and he seems to think its app is even better than Google’s.
+            I hope this helped you in your project. A few claps on this blog on Medium would
+            help me go a long way.
         </p>
-        <div>
-            <blockquote class="twitter-tweet blog-media">
-                <p lang="en" dir="ltr">I love <a
-                        href="https://twitter.com/DuckDuckGo?ref_src=twsrc%5Etfw">@DuckDuckGo</a>. My default search
-                    engine for a while now. The app is even better!</p>&mdash; jack 🌍🌏🌎 (@jack) <a
-                    href="https://twitter.com/jack/status/1199783221162053633?ref_src=twsrc%5Etfw">November 27, 2019</a>
-            </blockquote>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-        <p class="blog-content">
-            It is bad to overthink, but that's not what we are doing here. Give it a thought and lets talk about it.
-            After all, its your information in someone else's hands. :)
-        </p>
-        <a class="btn btn-primary" id="sub-button"
+        <a class="btn btn-primary sub-button" href="https://medium.com/@shantnu.agarwal/">Find me on Medium
+        </a>
+        <a class="btn btn-primary sub-button"
             href="https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6jTh1ydMqBBljMfASa_1ApUNURJODFPSlVUUzc3OEdRUDlMSDRZUTZCNi4u">Subscribe
             For Future Blogs</a>
         <div id="disqus_thread"></div>
-
     </div>
 
 
@@ -257,8 +284,8 @@
     <script>
 
         var disqus_config = function () {
-            this.page.url = "http://shantnu.net/blog.html";
-            this.page.identifier = "blog1.html";
+            this.page.url = "https://shantnu.net/blogs/azurefunctionsapi.html";
+            this.page.identifier = "AzureFunctionsAPI.html";
         };
         (function () { // DON'T EDIT BELOW THIS LINE
             var d = document, s = d.createElement('script');
