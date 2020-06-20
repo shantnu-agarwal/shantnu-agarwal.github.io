@@ -29,6 +29,21 @@
         span {
             font-size: 20px;
         }
+
+        .blog-item {
+            padding-top: 2rem;
+            margin-bottom: 5rem;
+            margin-top: 5rem;
+            border-radius: 5px;
+            border-style: solid;
+            border-width: 0.2rem;
+            display: block;
+            text-align: center;
+
+        }
+        h5{
+            margin-bottom: 2rem;
+        }
     </style>
 
 </head>
@@ -43,17 +58,17 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#skillset">Skills Set</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#skillset">Skills Set</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#exp">College Experience</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#exp">College Experience</a>
+                    <a class="nav-link" href="index.html#projects">Projects</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="blog.html">Blog</a>
+                    <a class="nav-link" href="blogs.html">Blogs</a>
                 </li>
             </ul>
         </div>
@@ -80,8 +95,33 @@
 
 
 
-    <div class="container" id="back2top">
-        
+    <div class="container" id="back2top" style="width: 100%;">
+        <h1>Blogs by Shantnu Agarwal</h1>
+        <hr class="my-4">
+
+        <div class="blog-item">
+            <a href="blogs/azurefunctionsapi.html" style="color: black;">
+                <img src="images/azurefunctionsapi/title.png" alt="Main Image"
+                    style="display: block; margin: auto; max-width: 100%;">
+                <h3>
+                    APIs with Azure Functions
+                </h3>
+                <h5>June 2020</h5>
+            </a>
+        </div>
+        <div class="blog-item">
+            <a href="blogs/trust.html" style="color: black; ">
+                <img src="images/companies.jpg" alt="Main Image" style="display: block; margin: auto;max-width: 100%;">
+                <h3>
+                    Trusting Your Information With The Right Company
+                </h3>
+                <h5>Jan 2020</h5>
+            </a>
+        </div>
+
+
+
+
     </div>
 
 
@@ -124,7 +164,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    
+
 
 
 </body>
