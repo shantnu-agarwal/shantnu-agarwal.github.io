@@ -26,9 +26,15 @@
 }
 
 
-#sub-button{
+.sub-button{
     display: block;
     margin: auto;
     width:50%; 
     margin-bottom: 2em;
+}
+
+.blog-subheading{
+    color: black;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 }
