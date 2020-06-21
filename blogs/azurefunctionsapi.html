@@ -127,7 +127,8 @@
         </p>
         <p class="blog-content">
             It’s time to change that. What if you only needed to be concerned about what data the API receives, what it
-            does it with and what it returns as response. True, all of us fear seeing the internal server error arising
+            does it with and what it returns as response. True, all of us fear seeing the <i>internal server error</i>
+            arising
             from mismatched server configurations.
         </p>
         <p class="blog-content">
@@ -159,32 +160,37 @@
         </p>
         <h2>Step 1:</h2>
         <p class="blog-content">
-            Open the Azure Portal, login and select Create a resource to access the Marketplace.
+            Open the <a href="https://portal.azure.com" target="_blank"> Azure Portal</a>, login and select <i>Create a
+                resource</i> to
+            access the <i>Marketplace</i>.
             <img class="blog-media" src="../images/azurefunctionsapi/azureportal.png" alt="Azure Portal Home Page">
         </p>
         <h2>Step 2:</h2>
         <p class="blog-content">
-            Search for Functions and choose Function App.
+            Search for <i>Functions</i> and choose <i>Function App</i>.
             <img class="blog-media" src="../images/azurefunctionsapi/searchfunction.png" alt="Searching for Functions">
         </p>
         <h2>Step 3:</h2>
         <p class="blog-content">
-            Click on Create to open the setup for the Function. Fill up the details as you need them. Be careful with
-            the Region as Functions might not be available in all Regions (Central India, for example, does not support
+            Click on <i>Create</i> to open the setup for the Function. Fill up the details as you need them. Be careful
+            with
+            the <i>Region</i> as Functions might not be available in all Regions (Central India, for example, does not
+            support
             Functions but South and West India do). I’ll go ahead with Node.js v12 LTS as my environment. Once done,
-            click next and select a Storage Account.
+            click next and select a <i>Storage Account</i>.
             <img class="blog-media" src="../images/azurefunctionsapi/basicconfig.png" alt="Configure Azure Functions">
         </p>
         <h2>Step 4:</h2>
         <p class="blog-content">
             You will need to set up storage so that there is some memory available for the API or app to store your
-            files and log data. Don’t worry, even though it says storage account, it is just a storage allocation for
+            files and log data. Don’t worry, even though it says storage <i>account</i>, it is just a storage allocation
+            for
             you on the cloud that you can use for other projects as well. Think of it as your hard disk in the cloud
             that can store clustered, unstructured data, media files, etc (end of Firebase’s expensive monopoly?).
         </p>
         <p class="blog-content">
             Choosing the plan in this section of the setup makes all the difference in the world if you are low on
-            budget. Go for serverless so that you can peacefully focus on building, testing, and deploying your
+            budget. Go for <i>serverless</i> so that you can peacefully focus on building, testing, and deploying your
             function. Serverless means that there is no dedicated server being allocated to you. Your function just
             needs storage to run. You will only be charged for the computation time and memory that you use. No server
             fees. If you go for a regular plan, you will be charged even if the function is sitting idle.
@@ -192,7 +198,8 @@
         </p>
         <h2>Step 5:</h2>
         <p class="blog-content">
-            Enable Application Insights and smash the Create button. Now you wait. Wait till theresources are deployed
+            Enable <i>Application Insights</i> and smash the <i>Create</i> button. Now you wait. Wait till theresources
+            are deployed
             and think about what you just did. You deployed a serverless app on the cloud, while minimising costs and
             giving up all concern for infrastructure. The app that you are now deploying will auto scale to handle
             millions of calls if that is what you want to throw at it.
@@ -200,7 +207,7 @@
         </p>
         <p class="blog-content">
             Now that the function deployment is complete, it's time to dive into the code and see the app work
-            first-hand. Click on Go to resource.
+            first-hand. Click on <i>Go to resource</i>.
         </p>
         <p class="blog-content">
             From the left side panel, choose Functions under the Functions header and click on <img
@@ -218,18 +225,21 @@
             key.
         </p>
         <p class="blog-content">
-            Open the newly deployed function and click on Code + Test from the left side panel. It will have a boiler
+            Open the newly deployed function and click on <i>Code + Test</i> from the left side panel. It will have a
+            boiler
             plate ready for you already.
         </p>
 
         <img class="blog-media" src="../images/azurefunctionsapi/boiler.png" alt="Boiler Plate">
         <p class="blog-content">
             This boiler plate is a simple Node.js API which requires a ‘name’ parameter and returns a basic answer.
-            Click on Get Function URL to get the API endpoint along with the access key. This access key authorises you
+            Click on <i>Get Function URL</i> to get the API endpoint along with the access key. This access key
+            authorises you
             to run the Function and is a mandatory query parameter for the HTTP request.
         </p>
         <p class="blog-content">
-            An API call be made using Postman or any other API testing software. Pass a name parameter as query to the
+            An API call be made using <a href="https://www.postman.com/" target="_blank">Postman</a> or any other API
+            testing software. Pass a name parameter as <i>query</i> to the
             API call and test it.
         </p>
         <img class="blog-media" src="../images/azurefunctionsapi/postman.gif" alt="Postman API Testing">
@@ -264,7 +274,8 @@
 
         <p class="blog-content">
             There is so much more to Azure Functions than just a regular HTTP API. Discover more about Azure Functions
-            on the vast and in-depth official documentation from Microsoft.
+            on the vast and in-depth <a href="https://docs.microsoft.com/en-us/azure/azure-functions/"
+                target="_blank">official documentation</a> from Microsoft.
         </p>
         <p class="blog-content">
             I hope this helped you in your project. A few claps on this blog on Medium would
