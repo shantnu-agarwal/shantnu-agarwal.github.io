@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <div>
+        <video controls="true">
+        </video>
+    </div>
+
+    <script>
+        function init() {
+            var video,
+                player,
+                url = "https://livestream-inct.streaming.media.azure.net/d6cbba66-422e-424a-aef0-1c27dbb7fe2a/5056aa5e-a2d1-42ed-bf1f-37efe5c31a97.ism/manifest(format=mpd-time-csf)";
+
+            video = document.querySelector("video");
+            player = dashjs.MediaPlayer().create();
+            player.initialize(video, url, true);
+        }
+    </script>
+
+    
+    <script src="http://cdn.dashjs.org/latest/dash.all.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            init();
+        });
+    </script>
+
+</body>
+
+</html>
