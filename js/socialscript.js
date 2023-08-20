@@ -29,6 +29,7 @@ if(hours<=6 || hours>=18){
   convert(document.querySelectorAll("button"),"white");
   convert(document.querySelectorAll("h4"),"white");
   convert(document.querySelectorAll("h5"),"white");
+  convertBorder(document.querySelectorAll("hr"),"1px solid white");
   convertBG(document.getElementsByClassName("nav-item"),"#121212");
   document.getElementsByClassName("navbar")[0].classList.remove("bg-light");
   convertBG(document.getElementsByClassName("navbar"),"black");
@@ -59,6 +60,13 @@ function convert(elemnt,colour){
     elemnt[i].style.color = colour;
   }
 }
+
+function convertBorder(elemnt,colour){
+  for (i=0;i<elemnt.length; i++){
+    elemnt[i].style.border = colour;
+  }
+}
+
 function convertBG(elemnt,colour){
   for (i=0;i<elemnt.length; i++){
     elemnt[i].style.background = colour;
