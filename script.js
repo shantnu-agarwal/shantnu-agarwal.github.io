@@ -1,6 +1,27 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#primary-navigation');
 
+// Set this to the GA4 Measurement ID supplied from Google Analytics before launch.
+const GA_MEASUREMENT_ID = 'G-9T35CTNRDM';
+if (GA_MEASUREMENT_ID) {
+  const gtagScript = document.createElement('script');
+  gtagScript.async = true;
+  gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  document.head.appendChild(gtagScript);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', GA_MEASUREMENT_ID, { allow_google_signals: false, allow_ad_personalization_signals: false });
+  document.querySelectorAll('a[href]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const href = link.getAttribute('href') || '';
+      if (href.includes('/work/')) window.gtag('event', 'select_content', { content_type: 'work_navigation' });
+      if (href.includes('/about/')) window.gtag('event', 'select_content', { content_type: 'about_navigation' });
+      if (href.includes('/contact/')) window.gtag('event', 'contact_cta');
+    });
+  });
+}
+
 function closeMenu() {
   navigation?.classList.remove('is-open');
   menuToggle?.setAttribute('aria-expanded', 'false');
@@ -39,6 +60,7 @@ if (window.location.protocol === 'file:') {
 document.querySelectorAll('[data-filter]').forEach((filter) => {
   filter.addEventListener('click', () => {
     const selected = filter.getAttribute('data-filter');
+    if (window.gtag) window.gtag('event', 'filter_notes', { category: selected });
     document.querySelectorAll('[data-filter]').forEach((item) => {
       const active = item === filter;
       item.classList.toggle('is-active', active);

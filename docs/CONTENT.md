@@ -163,7 +163,7 @@ IIM Ahmedabad · PGPX · 2026–27
 Body:
 After nearly five years in the industry, I decided to go back to the classroom.
 
-I'm currently pursuing my MBA at IIM Ahmedabad, spending my days exploring strategy, economics, marketing, leadership, and the different ways businesses succeed—or fail.
+I'm currently pursuing my MBA at IIM Ahmedabad, spending my days exploring strategy, economics, marketing, leadership, and the different ways businesses succeed (or fail).
 
 I'm also involved with the Product Management Club as its Placement Cell Head, helping fellow students prepare for careers in product management.
 
