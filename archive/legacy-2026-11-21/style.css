@@ -1,0 +1,106 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+	background-color: white;
+
+}
+
+.nav-item{
+	margin: 0.2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	
+}
+.nav-item:hover{
+	margin-right: 1rem;
+	margin-left: 1rem;
+	font-size: 18px;
+	font-weight: bold;
+}
+.navbar{
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+
+#back2top{
+	margin-top: 3rem;
+}
+.card, .jumbotron{
+	box-shadow: 1px 2px 1px;
+}
+.card-img-top{
+	width: 4rem;
+}
+.list-group-item{
+	text-align: left;
+}
+
+
+.btn{
+	background-color: white;
+	color: black;
+	width: 20rem;
+	height: auto;
+	margin-top: 2rem;
+}
+.btn:hover{
+	background-color: green;
+}
+#projects,#exp{
+	margin-top: 5rem;
+	margin-bottom: 3rem;
+}
+.astroller{
+	margin-top: 1rem;
+}
+
+.footer{
+  	bottom: 0;  	
+  	background-color: white;
+  	color: black;
+  	text-align: center;
+}
+.footer-image{
+	height: 3rem;
+}
+
+#pic{
+	height: 120px;
+	border-radius: 10%;
+}
+
+#scrollBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 4rem; 
+  right: 1rem; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: red;
+  color: white; 
+  padding: 0.5rem; 
+  border-radius: 10px; 
+}
+
+#scrollBtn:hover {
+  background-color: #555; 
+}
+
+.nav-item{
+	border-radius: 0.3rem;
+}
+
+.bult{
+	height: 15px;
+	margin-right: 10px;
+}
+
+.bult2{
+	fill: white;
+	height: 15px;
+}
