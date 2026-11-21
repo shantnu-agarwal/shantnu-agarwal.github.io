@@ -57,6 +57,27 @@ if (window.location.protocol === 'file:') {
   });
 }
 
+function decorateOutboundLinks() {
+  document.querySelectorAll('a[href]').forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    let destination;
+    try { destination = new URL(href, document.baseURI); } catch { return; }
+    if (!/^https?:$/.test(destination.protocol) || destination.origin === window.location.origin || link.dataset.outboundTracked) return;
+    const content = (link.textContent || destination.hostname).trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || destination.hostname;
+    destination.searchParams.set('utm_source', 'shantnu.in');
+    destination.searchParams.set('utm_medium', 'referral');
+    destination.searchParams.set('utm_campaign', 'personal_site');
+    destination.searchParams.set('utm_content', content);
+    link.href = destination.toString();
+    link.dataset.outboundTracked = 'true';
+    link.addEventListener('click', () => {
+      if (window.gtag) window.gtag('event', 'outbound_click', { link_url: destination.toString(), link_domain: destination.hostname, link_text: content });
+    });
+  });
+}
+
+decorateOutboundLinks();
+
 document.querySelectorAll('[data-filter]').forEach((filter) => {
   filter.addEventListener('click', () => {
     const selected = filter.getAttribute('data-filter');
